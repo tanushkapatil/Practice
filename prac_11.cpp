@@ -108,3 +108,40 @@ void HashTable::displayTable() {
         }
     }
 }
+
+int main() {
+    HashTable ht; // Create a hash table object
+    int choice;
+
+    // Menu loop
+    while (1) {
+        cout << "\nEmployee Database Menu:\n";
+        cout << "1. Insert employee\n";
+        cout << "2. Delete employee\n";
+        cout << "3. Display all employees\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        // Switch case for menu options
+        switch (choice) {
+        case 1:
+            ht.insertID(); // Insert a new employee
+            break;
+        case 2:
+            ht.deleteID(); // Delete an employee
+            break;
+        case 3:
+            ht.displayTable(); // Display the hash table
+            break;
+        case 4:
+            cout << "Exiting the program." << endl;
+            exit(0); // Exit the program
+        default:
+            cout << "Invalid choice! Please enter a valid option." << endl;
+            break;
+        }
+    }
+
+    return 0;
+}
