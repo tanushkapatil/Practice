@@ -41,3 +41,18 @@ public :
         return emp_id;
     }
 };
+class HashTable {
+    Employee e[size] ;
+    int flag[size] ;
+
+public :
+    HashTable() {
+        for (int i = 0; i < size; i++) {
+            flag[i] = 0; // Initialize all slots as empty
+        }
+    }
+    void insertID();
+    void deleteID();
+    void displayTable();
+    int hashFunction(int emp_id);
+};
